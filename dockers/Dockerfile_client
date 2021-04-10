@@ -19,6 +19,7 @@ EXPOSE 4040 8888
 # new:
 # install pyspark
 RUN pip3 install pyspark
+ENV PYSPARK_PYTHON "/usr/bin/python3"
 
 # create workplace folder
 WORKDIR /home/
