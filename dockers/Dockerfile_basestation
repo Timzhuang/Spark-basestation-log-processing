@@ -22,7 +22,7 @@ RUN su - www-data -c "git clone https://github.com/ZhaoweiTan/MI-eNB.git"
 
 RUN su - www-data -c "MI-eNB/cmake_targets/build_oai -I -w USRP --eNB --UE"
 
-COPY test.conf /root/test.conf
+COPY resources/test.conf /root/test.conf
 
 # option1: data transfer by file
 #COPY LogSender.java /root/
