@@ -3,7 +3,8 @@ from pyspark.streaming import StreamingContext
 import binascii
 
 
-sc = SparkContext("spark://vagrant.vm:7077", "NetworkWordCount")
+#sc = SparkContext("spark://vagrant.vm:7077", "NetworkWordCount")
+sc = SparkContext("spark://spark-master:7077", "NetworkWordCount")
 sc.setLogLevel("ERROR")
 ssc = StreamingContext(sc, 1)
 ssc.checkpoint("checkpoint")

@@ -20,6 +20,8 @@ EXPOSE 4040 8888
 # install pyspark
 RUN pip3 install pyspark
 ENV PYSPARK_PYTHON "/usr/bin/python3"
+ENV PATH "$PATH:$SPARK_HOME/bin"
+ENV PYTHONPATH "$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
 
 # create workplace folder
 WORKDIR /home/

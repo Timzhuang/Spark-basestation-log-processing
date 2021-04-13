@@ -35,6 +35,9 @@ COPY resources/test.conf /root/test.conf
 #	tail -f  /root/bslog  | java LogSender 172.18.0.22 2233 0
 
 # option2: data transfer by socket
+RUN export DEBIAN_FRONTEND=noninteractive &&\
+        apt-get update && apt-get install -y netcat
+
 CMD ENODEB=1 /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-softmodem -O /root/test.conf --basicsim --noS1 > /root/bslog & \
 	sudo -E /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-uesoftmodem -C 2350000000 -r 25 --ue-rxgain 125 --basicsim --noS1 >/dev/null &\
 	tail -f  /root/bslog  | nc -l localhost 12345

@@ -3,7 +3,7 @@ from analyzer import Cluster
 c = Cluster()
 
 #c.register_master("spark://vagrant.vm:7077")
-c.register_master("spark-master:7077")
+c.register_master("spark://spark-master:7077")
 c.add_dependency("decoder.py")
 
 c.register_flatmap("decode_line")
