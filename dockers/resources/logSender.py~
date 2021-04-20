@@ -1,0 +1,7 @@
+import socket
+import sys
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('localhost', 12345))
+for l in sys.stdin:
+    s.send(l)

@@ -1,5 +1,5 @@
 ## build docker images
-docker build -f Dockerfile_base -t base .
+docker build -f Dockerfile_base -t spark_base .
 docker build -f Dockerfile_master -t spark_master .
 docker build -f Dockerfile_worker -t spark_worker .
 docker build -f Dockerfile_client -t spark_submit .
