@@ -6,12 +6,12 @@ ENV SPARK_EXECUTOR_MEMORY=6G
 ENV SPARK_EXECUTOR_CORES=3
 
 # Install libraries
-COPY ./resources/requirements.txt .
+COPY ./resources/client/requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy examples python files into container
 COPY ./examples/ /home/examples/
-COPY ./resources/log4j.properties ./resources/spark-defaults.conf $SPARK_HOME/conf/
+COPY ./resources/client/log4j.properties ./resources/client/spark-defaults.conf $SPARK_HOME/conf/
 
 EXPOSE 4040 8888
 #WORKDIR /home/
@@ -24,18 +24,18 @@ ENV PATH "$PATH:$SPARK_HOME/bin"
 ENV PYTHONPATH "$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
 
 # create workplace folder
-WORKDIR /home/
-RUN mkdir log-streaming
+#WORKDIR /home/
+#RUN mkdir log-streaming
 WORKDIR /home/log-streaming/
 
 # copy source code
-COPY ./resources/decoder.py ./
-COPY ./resources/logCounter.py ./
-#COPY ./resources/analyzer.py ./
-#COPY ./resources/analyzer_base.py ./
-#COPY ./resources/network_wordcount.py ./
-#COPY ./resources/runner.py ./
-#COPY ./resources/udf.py ./
+#COPY ./resources/client/decoder.py ./
+COPY ./resources/client/logCounter.py ./
+COPY ./resources/client/analyzer.py ./
+#COPY ./resources/client/analyzer_base.py ./
+COPY ./resources/client/network_wordcount.py ./
+COPY ./resources/client/runner.py ./
+COPY ./resources/client/udf.py ./
 
 
 

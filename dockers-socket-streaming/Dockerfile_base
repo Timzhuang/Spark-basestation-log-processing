@@ -49,5 +49,9 @@ RUN tar -xzf spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz && \
     export PATH=$SPARK_HOME/bin:$PATH
 
 # copy source code for log processing
-COPY ./resources/decoder.py ./
+WORKDIR /home/
+RUN mkdir log-streaming
+WORKDIR /home/log-streaming/
+COPY ./resources/base/decoder.py ./
+COPY ./resources/base/analyzer_base.py ./
 

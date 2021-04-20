@@ -22,7 +22,7 @@ RUN su - www-data -c "git clone https://github.com/ZhaoweiTan/MI-eNB.git"
 
 RUN su - www-data -c "MI-eNB/cmake_targets/build_oai -I -w USRP --eNB --UE"
 
-COPY resources/test.conf /root/test.conf
+COPY resources/basestation/test.conf /root/test.conf
 
 # option1: data transfer by file
 #COPY LogSender.java /root/
@@ -38,7 +38,9 @@ COPY resources/test.conf /root/test.conf
 RUN export DEBIAN_FRONTEND=noninteractive &&\
         apt-get update && apt-get install -y netcat
 
+COPY resources/basestation/logSender.py /root/
+
 CMD ENODEB=1 /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-softmodem -O /root/test.conf --basicsim --noS1 > /root/bslog & \
 	sudo -E /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-uesoftmodem -C 2350000000 -r 25 --ue-rxgain 125 --basicsim --noS1 >/dev/null &\
-	tail -f  /root/bslog | nc -l 12345
+	tail -f  /root/bslog | nc -lk -s basestation -p 12345
 	
