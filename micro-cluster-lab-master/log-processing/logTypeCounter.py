@@ -11,12 +11,11 @@ def decode_packet(line):
 
 
 conf = SparkConf()
-conf.setMaster('spark://172.18.0.22:7077')
 conf.setAppName('basestation-analyze')
 sc = SparkContext(conf=conf)
 ssc = StreamingContext(sc, 10)
 
-packets = ssc.textFileStream("/mnt/nfs_clientshare/data")
+packets = ssc.textFileStream("hdfs:///data/")
 count  = packets.map(lambda packet: (decode_packet(packet), 1)).filter(lambda x: x[0] != "").reduceByKey(lambda x,y: x+y)
 
 count.pprint()

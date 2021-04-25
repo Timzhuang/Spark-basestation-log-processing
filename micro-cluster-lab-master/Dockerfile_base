@@ -60,6 +60,20 @@ EXPOSE 8020
 EXPOSE 22
 
 # copy log processing code
-RUN mkdir lab
+#WORKDIR /root/
+COPY log-processing/mi.tgz /root/mi.tgz
+RUN tar xzvf /root/mi.tgz -C /root/
+ENV PYTHONPATH "/root/:$PYTHONPATH"
+RUN apt update && apt-get install -y netcat
+
+COPY log-processing/decoder_v2.py /root/
+COPY log-processing/logCounter.py /root/
+COPY log-processing/logTypeCounter.py /root/
+#COPY log-processing/LogReceiver.java /root/
+COPY log-processing/sample_log /root/
+#RUN javac /root/LogReceiver.java
+COPY log-processing/logReceiver.sh /root/
+RUN chmod +x /root/logReceiver.sh
+
 
 ENTRYPOINT ["/bin/bash", "bootstrap.sh"]

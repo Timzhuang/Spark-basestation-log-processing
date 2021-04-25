@@ -3,6 +3,11 @@ import java.net.Socket;
 import java.net.ServerSocket;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+/*
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+*/
 
 public class LogReceiver {
     int port;

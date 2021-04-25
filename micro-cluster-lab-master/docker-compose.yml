@@ -19,6 +19,7 @@ services:
       cluster-network:
         aliases: 
           - node-master
+    command: /root/logReceiver.sh
   node-slave1:
     image: cluster-base:latest
     container_name: node-slave1
@@ -50,6 +51,11 @@ services:
       cluster-network:
         aliases:
           - basestation
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+    privileged: true
   
 networks:
   cluster-network:
