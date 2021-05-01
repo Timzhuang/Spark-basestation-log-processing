@@ -8,10 +8,15 @@ services:
     ports:
       - "9043:8042"
     networks:
-      cluster-network:
+      default:
         aliases: 
           - node-slave2
     deploy:
       placement:
         constraints:
           - node.labels.role==worker
+networks:
+  default:
+    external:
+      name: spark-cluster_cluster-network
+    driver: overlay
