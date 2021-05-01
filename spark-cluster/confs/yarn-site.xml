@@ -51,4 +51,8 @@
 	  <name>yarn.resourcemanager.scheduler.address</name>
 	  <value>resource_manager_host:8030</value>
 	</property>
+	<property>
+	  <name>yarn.resourcemanager.address</name>
+	  <value>resource_manager_host:8032</value>
+	</property>
 </configuration>
