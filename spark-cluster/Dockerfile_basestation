@@ -1,0 +1,36 @@
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ=UTC
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN export DEBIAN_FRONTEND=noninteractive &&\
+	apt-get update && apt-get install -y git sudo curl openssl cmake build-essential kmod\
+	linux-image-$(uname -r) linux-headers-$(uname -r) libprotobuf-dev protobuf-compiler \
+	python3 python3-pip nano libgcrypt20-dev   libglib2.0-dev xxd default-jdk 
+	
+
+WORKDIR /root/
+
+#install base station
+RUN deluser www-data
+RUN groupadd -g 1000 www-data
+RUN useradd -u 1000 -ms /bin/bash -g www-data www-data
+RUN echo 'www-data ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+RUN su - www-data -c "git clone https://github.com/ZhaoweiTan/MI-eNB.git"
+
+RUN su - www-data -c "MI-eNB/cmake_targets/build_oai -I -w USRP --eNB --UE"
+
+COPY basestation/test.conf /root/test.conf
+#COPY basestation/LogSender.java /root/
+COPY basestation/logSender.sh /root/
+RUN chmod +x /root/logSender.sh
+#RUN javac LogSender.java
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y netcat
+
+#CMD /bin/bash
+CMD ENODEB=1 /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-softmodem -O /root/test.conf --basicsim --noS1 > /root/bslog & \
+	sudo -E /home/www-data/MI-eNB/cmake_targets/lte_build_oai/build/lte-uesoftmodem -C 2350000000 -r 25 --ue-rxgain 125 --basicsim --noS1 >/dev/null &\
+	./logSender.sh
+	
