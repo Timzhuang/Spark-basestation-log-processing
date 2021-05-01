@@ -3,7 +3,7 @@ services:
   node-master:
     depends_on:
       - node-slave1
-      - node-slave2
+#      - node-slave2
     image: cluster-base:latest
     container_name: node-master
     hostname: node-master

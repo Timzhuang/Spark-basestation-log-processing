@@ -46,4 +46,9 @@
                 <name>yarn.nodemanager.vmem-check-enabled</name>
                 <value>false</value>
         </property>
+	<property>
+	  <description>The address of the scheduler interface.</description>
+	  <name>yarn.resourcemanager.scheduler.address</name>
+	  <value>resource_manager_host:8030</value>
+	</property>
 </configuration>
