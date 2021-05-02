@@ -41,22 +41,22 @@ services:
       placement:
         constraints:
           - node.labels.role==master
-  node-slave2:
-    image: cluster-base:latest
-    container_name: node-slave2
-    hostname: node-slave2
-    tty: true
-    ports:
-      - "9043:8042"
-    networks:
-      cluster-network:
-      #default:
-        aliases: 
-          - node-slave2
-    deploy:
-      placement:
-        constraints:
-          - node.labels.role==worker
+#  node-slave2:
+#    image: cluster-base:latest
+#    container_name: node-slave2
+#    hostname: node-slave2
+#    tty: true
+#    ports:
+#      - "9043:8042"
+#    networks:
+#      cluster-network:
+#      #default:
+#        aliases: 
+#          - node-slave2
+#    deploy:
+#      placement:
+#        constraints:
+#          - node.labels.role==worker
   basestation:
     image: basestation:latest
     container_name: basestation
@@ -77,13 +77,13 @@ services:
     privileged: true
 
 
-#networks:
-#  cluster-network:
-#    external: true
-
 networks:
   cluster-network:
-    driver: overlay
-    attachable: true
-    ipam:
-      driver: default
+    external: true
+
+#networks:
+#  cluster-network:
+#    driver: overlay
+#    attachable: true
+#    ipam:
+#      driver: default
