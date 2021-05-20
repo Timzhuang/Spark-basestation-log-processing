@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  node-slave2:
+    image: cluster-base:latest
+    container_name: node-slave2
+    hostname: node-slave2
+    tty: true
+    ports:
+      - "9043:8042"
+    networks:
+      cluster-network:
+        aliases:
+          - node-slave2
+    deploy:
+      placement:
+        constraints:
+          - node.labels.role==worker
+
+networks:
+  cluster-network:
+    external: true
