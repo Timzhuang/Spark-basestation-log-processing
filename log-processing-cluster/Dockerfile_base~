@@ -30,52 +30,33 @@ RUN wget -P /tmp/ https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spar
 RUN tar xvf /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz -C /tmp && \
     mv /tmp/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} ${SPARK_HOME}
 
-# generate an SSH key to allow communication between our containers
 RUN ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa && \
 	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && \
-	chmod 600 ~/.ssh/authorized_keys && \
-	echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+	chmod 600 ~/.ssh/authorized_keys
 COPY /confs/config /root/.ssh
 RUN chmod 600 /root/.ssh/config
 
-# copy configuration files for hadoop and spark
 COPY /confs/*.xml /opt/hadoop/etc/hadoop/
 COPY /confs/slaves /opt/hadoop/etc/hadoop/
 COPY /script_files/bootstrap.sh /
 COPY /confs/spark-defaults.conf ${SPARK_HOME}/conf
 
-# install pyspark
+#install pyspark
 RUN pip3 install pyspark
 ENV PYSPARK_PYTHON "/usr/bin/python3"
 ENV PATH "$PATH:$SPARK_HOME/bin"
 ENV PYTHONPATH "$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.9-src.zip:$PYTHONPATH"
 
-# set environment variables 
 RUN echo "export JAVA_HOME=${JAVA_HOME}" >> /etc/environment
 
-# Exposing ports so the container can listen to them
 EXPOSE 9000
 EXPOSE 7077
 EXPOSE 4040
 EXPOSE 8020
 EXPOSE 22
 
-# copy log processing code
-#WORKDIR /root/
-COPY log-processing/mi.tgz /root/mi.tgz
-RUN tar xzvf /root/mi.tgz -C /root/
-ENV PYTHONPATH "/root/:$PYTHONPATH"
-RUN apt update && apt-get install -y netcat
-
-COPY log-processing/decoder_v2.py /root/
-COPY log-processing/logCounter.py /root/
-COPY log-processing/logTypeCounter.py /root/
-COPY log-processing/dci_count.py /root/
-#COPY log-processing/LogReceiver.java /root/
-COPY log-processing/sample_log /root/
-#RUN javac /root/LogReceiver.java
-COPY log-processing/logReceiver.sh /root/
-RUN chmod +x /root/logReceiver.sh
-
+RUN mkdir lab
+COPY notebooks/*.ipynb /root/lab/
+COPY datasets /root/lab/datasets
 
 ENTRYPOINT ["/bin/bash", "bootstrap.sh"]

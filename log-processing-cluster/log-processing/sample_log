@@ -1,0 +1,906 @@
+[LOADER] library libNB_IoT.so is not loaded: libNB_IoT.so: cannot open shared object file: No such file or directory
+[CONFIG] get parameters from libconfig /var/www/public/../storage/app/OAI_config.conf , debug flags: 0x00000000
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+# /dev/cpu_dma_latency set to 0us
+LTE_PDCP_DL_Cipher_Data_PDU: 0
+LTE_PDCP_UL_Cipher_Data_PDU: 0
+LTE_MAC_DL_Transport_Block: 0
+LTE_MAC_UL_Transport_Block: 0
+LTE_RLC_UL_AM_All_PDU: 0
+LTE_RLC_DL_AM_All_PDU: 0
+LTE_RRC_Event: 0
+log init done
+Reading in command-line options
+Getting ENBSParams
+Configuration: nb_rrc_inst 1, nb_L1_inst 1, nb_ru 1
+               nb_nbiot_rrc_inst 0, nb_nbiot_L1_inst 0, nb_nbiot_macrlc_inst 0
+configuring for RAU/RRU
+CPU Freq is 3.696389 
+ITTI init, useMME: 0
+[TMR]   Starting itti queue: TASK_UNKNOWN as task 0
+[TMR]   Starting itti queue: TASK_TIMER as task 1
+[TMR]   Starting itti queue: TASK_L2L1 as task 2
+[TMR]   Starting itti queue: TASK_BM as task 3
+[TMR]   Starting itti queue: TASK_PHY_ENB as task 4
+[TMR]   Starting itti queue: TASK_MAC_ENB as task 5
+[TMR]   Starting itti queue: TASK_RLC_ENB as task 6
+[TMR]   Starting itti queue: TASK_RRC_ENB_NB_IoT as task 7
+[TMR]   Starting itti queue: TASK_PDCP_ENB as task 8
+[TMR]   Starting itti queue: TASK_DATA_FORWARDING as task 9
+[TMR]   Starting itti queue: TASK_END_MARKER as task 10
+[TMR]   Starting itti queue: TASK_RRC_ENB as task 11
+[TMR]   Starting itti queue: TASK_RAL_ENB as task 12
+[TMR]   Starting itti queue: TASK_S1AP as task 13
+[TMR]   Starting itti queue: TASK_X2AP as task 14
+[TMR]   Starting itti queue: TASK_SCTP as task 15
+[TMR]   Starting itti queue: TASK_ENB_APP as task 16
+[TMR]   Starting itti queue: TASK_FLEXRAN_AGENT as task 17
+[TMR]   Starting itti queue: TASK_PHY_UE as task 18
+[TMR]   Starting itti queue: TASK_MAC_UE as task 19
+[TMR]   Starting itti queue: TASK_RLC_UE as task 20
+[TMR]   Starting itti queue: TASK_PDCP_UE as task 21
+[TMR]   Starting itti queue: TASK_RRC_UE as task 22
+[TMR]   Starting itti queue: TASK_NAS_UE as task 23
+[TMR]   Starting itti queue: TASK_RAL_UE as task 24
+[TMR]   Starting itti queue: TASK_MSC as task 25
+[TMR]   Starting itti queue: TASK_GTPV1_U as task 26
+[TMR]   Starting itti queue: TASK_UDP as task 27
+[TMR]   Starting itti queue: TASK_CU_F1 as task 28
+[TMR]   Starting itti queue: TASK_DU_F1 as task 29
+[OPT]   OPT disabled
+reported resolution = 1 ns
+[HW]   Version: Branch: wing Abrev. Hash: f66c3f146 Date: Tue Jan 19 00:18:54 2021 -0800
+Runtime table
+[PHY]   RC.eNB = 0x55f8b08c4d60
+[PHY]   RC.eNB[0] = 0x55f8b08c4e10
+[PHY]   RC.eNB[0][0] = 0x7fa7d0dad010
+[ENB_APP]   Initializing northbound interface for L1
+[PHY]   l1_north_init_eNB() RC.nb_L1_inst:1
+[PHY]   l1_north_init_eNB() RC.nb_L1_CC[0]:1
+[PHY]   l1_north_init_eNB() RC.eNB[0][0] installing callbacks
+[PHY]   read_config_and_init() RC.nb_L1_inst: 1
+[MAC]   [MAIN] Init function start:nb_macrlc_inst=1
+[PDCP]   PDCP layer has been initialized
+Configuring local RRC for MACRLC
+sched mode = fairRR 1 [fairRR]
+[MAC]   read_config_and_init() RC.nb_macrlc_inst: 1
+[PHY]   l1_north_init_eNB() RC.nb_L1_inst:1
+[PHY]   l1_north_init_eNB() RC.nb_L1_CC[0]:1
+[PHY]   l1_north_init_eNB() RC.eNB[0][0] installing callbacks
+[RRC]   Instance 0: Southbound Transport local_mac
+[RRC]   Setting node_type to ngran_eNB
+[RRC]   num component carriers 1 
+[RRC]   enb_config::RCconfig_RRC() parameter number: 0, total number of parameters: 78, ccspath: eNBs.[0].component_carriers.[0] 
+ 
+phich.resource 0 (ONESIXTH), phich.duration 0 (NORMAL)
+No eMBMS configuration, skipping it
+No eMTC configuration, skipping it
+No SL configuration skipping it
+[RRC]   Node type 0 
+ [FLEXRAN_AGENT]   FlexRAN Agent for eNB 0 is DISABLED
+[PDCP]   PDCP layer has been initialized
+[PDCP]   pdcp init, usenetlink
+[NETLINK]Opened socket oaitun_enb1 with fd 66
+[OIP]   Interface oaitun_enb1 successfuly configured, ip address 10.0.1.1, mask 255.255.255.0 broadcast address 10.0.1.255
+[PDCP]   ENB pdcp will use tun interface
+[ENB_APP]   Creating ENB_APP eNB Task
+[TMR]   Created Posix thread TASK_ENB_APP
+[RRC]   Creating RRC eNB Task
+[TMR]   Created Posix thread TASK_RRC_ENB
+[RRC]   Entering main loop of RRC message task
+[RRC]   [eNB 0] Received RRC_CONFIGURATION_REQ : 0x55f8b08f4e7c
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI 0] Init...
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI 0] Checking release 
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI 0] Rel14 RRC detected, MBMS flag 0
+[RRC]   [eNB 0] Node type 0 
+ [RRC]   configuration->schedulingInfoSIB1_BR_r13[CC_id] 0
+[RRC]   Configuring MIB (N_RB_DL 25,phich_Resource 0,phich_Duration 0)
+[RRC]   [MIB] systemBandwidth 2, phich_duration 0, phich_resource 0, sfn 0
+[RRC]   [MIB] schedulingInfoSIB1 0
+[RRC]   [eNB 0] Configuration SIB2/3, eMBMS = 0
+[MI] 0xB0C1
+<BCCH-DL-SCH-Message>
+    <message>
+        <c1>
+            <systemInformation>
+                <criticalExtensions>
+                    <systemInformation-r8>
+                        <sib-TypeAndInfo>
+                                <sib2>
+                                    <radioResourceConfigCommon>
+                                        <rach-ConfigCommon>
+                                            <preambleInfo>
+                                                <numberOfRA-Preambles><n64/></numberOfRA-Preambles>
+                                            </preambleInfo>
+                                            <powerRampingParameters>
+                                                <powerRampingStep><dB4/></powerRampingStep>
+                                                <preambleInitialReceivedTargetPower><dBm-108/></preambleInitialReceivedTargetPower>
+                                            </powerRampingParameters>
+                                            <ra-SupervisionInfo>
+                                                <preambleTransMax><n10/></preambleTransMax>
+                                                <ra-ResponseWindowSize><sf10/></ra-ResponseWindowSize>
+                                                <mac-ContentionResolutionTimer><sf48/></mac-ContentionResolutionTimer>
+                                            </ra-SupervisionInfo>
+                                            <maxHARQ-Msg3Tx>4</maxHARQ-Msg3Tx>
+                                        </rach-ConfigCommon>
+                                        <bcch-Config>
+                                            <modificationPeriodCoeff><n2/></modificationPeriodCoeff>
+                                        </bcch-Config>
+                                        <pcch-Config>
+                                            <defaultPagingCycle><rf128/></defaultPagingCycle>
+                                            <nB><oneT/></nB>
+                                        </pcch-Config>
+                                        <prach-Config>
+                                            <rootSequenceIndex>0</rootSequenceIndex>
+                                            <prach-ConfigInfo>
+                                                <prach-ConfigIndex>0</prach-ConfigIndex>
+                                                <highSpeedFlag><false/></highSpeedFlag>
+                                                <zeroCorrelationZoneConfig>1</zeroCorrelationZoneConfig>
+                                                <prach-FreqOffset>2</prach-FreqOffset>
+                                            </prach-ConfigInfo>
+                                        </prach-Config>
+                                        <pdsch-ConfigCommon>
+                                            <referenceSignalPower>-27</referenceSignalPower>
+                                            <p-b>0</p-b>
+                                        </pdsch-ConfigCommon>
+                                        <pusch-ConfigCommon>
+                                            <pusch-ConfigBasic>
+                                                <n-SB>1</n-SB>
+                                                <hoppingMode><interSubFrame/></hoppingMode>
+                                                <pusch-HoppingOffset>0</pusch-HoppingOffset>
+                                                <enable64QAM><false/></enable64QAM>
+                                            </pusch-ConfigBasic>
+                                            <ul-ReferenceSignalsPUSCH>
+                                                <groupHoppingEnabled><true/></groupHoppingEnabled>
+                                                <groupAssignmentPUSCH>0</groupAssignmentPUSCH>
+                                                <sequenceHoppingEnabled><false/></sequenceHoppingEnabled>
+                                                <cyclicShift>1</cyclicShift>
+                                            </ul-ReferenceSignalsPUSCH>
+                                        </pusch-ConfigCommon>
+                                        <pucch-ConfigCommon>
+                                            <deltaPUCCH-Shift><ds1/></deltaPUCCH-Shift>
+                                            <nRB-CQI>1</nRB-CQI>
+                                            <nCS-AN>0</nCS-AN>
+                                            <n1PUCCH-AN>0</n1PUCCH-AN>
+                                        </pucch-ConfigCommon>
+                                        <soundingRS-UL-ConfigCommon>
+                                            <release></release>
+                                        </soundingRS-UL-ConfigCommon>
+                                        <uplinkPowerControlCommon>
+                                            <p0-NominalPUSCH>-96</p0-NominalPUSCH>
+                                            <alpha><al1/></alpha>
+                                            <p0-NominalPUCCH>-106</p0-NominalPUCCH>
+                                            <deltaFList-PUCCH>
+                                                <deltaF-PUCCH-Format1><deltaF2/></deltaF-PUCCH-Format1>
+                                                <deltaF-PUCCH-Format1b><deltaF3/></deltaF-PUCCH-Format1b>
+                                                <deltaF-PUCCH-Format2><deltaF0/></deltaF-PUCCH-Format2>
+                                                <deltaF-PUCCH-Format2a><deltaF0/></deltaF-PUCCH-Format2a>
+                                                <deltaF-PUCCH-Format2b><deltaF0/></deltaF-PUCCH-Format2b>
+                                            </deltaFList-PUCCH>
+                                            <deltaPreambleMsg3>6</deltaPreambleMsg3>
+                                        </uplinkPowerControlCommon>
+                                        <ul-CyclicPrefixLength><len1/></ul-CyclicPrefixLength>
+                                    </radioResourceConfigCommon>
+                                    <ue-TimersAndConstants>
+                                        <t300><ms1000/></t300>
+                                        <t301><ms1000/></t301>
+                                        <t310><ms1000/></t310>
+                                        <n310><n20/></n310>
+                                        <t311><ms10000/></t311>
+                                        <n311><n1/></n311>
+                                    </ue-TimersAndConstants>
+                                    <freqInfo>
+                                        <additionalSpectrumEmission>1</additionalSpectrumEmission>
+                                    </freqInfo>
+                                    <timeAlignmentTimerCommon><infinity/></timeAlignmentTimerCommon>
+                                </sib2>
+                            
+                                <sib3>
+                                    <cellReselectionInfoCommon>
+                                        <q-Hyst><dB4/></q-Hyst>
+                                    </cellReselectionInfoCommon>
+                                    <cellReselectionServingFreqInfo>
+                                        <threshServingLow>31</threshServingLow>
+                                        <cellReselectionPriority>7</cellReselectionPriority>
+                                    </cellReselectionServingFreqInfo>
+                                    <intraFreqCellReselectionInfo>
+                                        <q-RxLevMin>-70</q-RxLevMin>
+                                        <s-IntraSearch>31</s-IntraSearch>
+                                        <allowedMeasBandwidth><mbw6/></allowedMeasBandwidth>
+                                        <presenceAntennaPort1><false/></presenceAntennaPort1>
+                                        <neighCellConfig>
+                                            01
+                                        </neighCellConfig>
+                                        <t-ReselectionEUTRA>1</t-ReselectionEUTRA>
+                                    </intraFreqCellReselectionInfo>
+                                    <ext1>
+                                        <s-IntraSearch-v920>
+                                            <s-IntraSearchP-r9>31</s-IntraSearchP-r9>
+                                            <s-IntraSearchQ-r9>4</s-IntraSearchQ-r9>
+                                        </s-IntraSearch-v920>
+                                    </ext1>
+                                    <ext4>
+                                        <cellSelectionInfoCE-r13>
+                                            <q-RxLevMinCE-r13>-70</q-RxLevMinCE-r13>
+                                        </cellSelectionInfoCE-r13>
+                                        <t-ReselectionEUTRA-CE-r13>2</t-ReselectionEUTRA-CE-r13>
+                                    </ext4>
+                                </sib3>
+                            
+                        </sib-TypeAndInfo>
+                    </systemInformation-r8>
+                </criticalExtensions>
+            </systemInformation>
+        </c1>
+    </message>
+</BCCH-DL-SCH-Message>
+[/MI]
+[MI] 0xB0C0 message_type: LTE-RRC_BCCH_DL_SCH message_byte_in_hex: 00.80.0f.99.bd.64.80.00.
+[/MI]
+[RRC]   do_SIB23, size 38 
+ [MAC]   Configuring MIB for instance 0, CCid 0 : (band 40,N_RB_DL 25,Nid_cell 0,p 1,DL freq 2350000000,phich_config.resource 0, phich_config.duration 0)
+[MAC]   config_mib() NFAPI_CONFIG_REQUEST(num_tlv:16) DL_BW:25 UL_BW:25 Ncp 0,p_eNB 1,earfcn 39150,band 40,phich_resource 0 phich_duration 0 phich_power_offset 6000 PSS 6000 SSS 6000 PCI 0 PBCH repetition 0
+[MAC]   [CONFIG]SIB2/3 Contents (partial)
+[MAC]   [CONFIG]pusch_config_common.n_SB = 1
+[MAC]   [CONFIG]pusch_config_common.hoppingMode = 0
+[MAC]   [CONFIG]pusch_config_common.pusch_HoppingOffset = 0
+[MAC]   [CONFIG]pusch_config_common.enable64QAM = 0
+[MAC]   [CONFIG]pusch_config_common.groupHoppingEnabled = 1
+[MAC]   [CONFIG]pusch_config_common.groupAssignmentPUSCH = 0
+[MAC]   [CONFIG]pusch_config_common.sequenceHoppingEnabled = 0
+[MAC]   [CONFIG]pusch_config_common.cyclicShift  = 1
+[PHY]   Configuring MIB for instance 0, CCid 0 : (band 40,N_RB_DL 25, N_RB_UL 25, Nid_cell 0,eNB_tx_antenna_ports 1,Ncp 0,DL freq 39150,phich_config.resource 0, phich_config.duration 0)
+[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[LOADER] library libcoding.so successfully loaded
+[PHY]   prach_config_common.rootSequenceIndex = 0
+[PHY]   prach_config_common.prach_ConfigInfo.prach_ConfigIndex = 0
+[PHY]   prach_config_common.prach_ConfigInfo.highSpeedFlag = 0
+[PHY]   prach_config_common.prach_ConfigInfo.zeroCorrelationZoneConfig = 1
+[PHY]   prach_config_common.prach_ConfigInfo.prach_FreqOffset = 2
+[PHY]   pusch_config_common.n_SB = 1
+[PHY]   pusch_config_common.hoppingMode = 0
+[PHY]   pusch_config_common.pusch_HoppingOffset = 0
+[PHY]   pusch_config_common.enable64QAM = 0
+[PHY]   pusch_config_common.ul_ReferenceSignalsPUSCH.groupHoppingEnabled = 1
+[PHY]   pusch_config_common.ul_ReferenceSignalsPUSCH.groupAssignmentPUSCH = 0
+[PHY]   pusch_config_common.ul_ReferenceSignalsPUSCH.sequenceHoppingEnabled = 0
+[PHY]   pusch_config_common.ul_ReferenceSignalsPUSCH.cyclicShift = 2
+[PHY]   eNB 0/0 configured
+[RRC]   [eNB] handover active state is 0 
+[RRC]   [eNB] eMBMS active state is 0 
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI 0] ENB:OPENAIR RRC IN....
+[ENB_APP]   START MAIN THREADS
+RC.nb_L1_inst:1
+Initializing eNB threads single_thread_flag:0 wait_for_sync:0
+[PHY]   [lte-softmodem.c] eNB structure about to allocated RC.nb_L1_inst:1 RC.nb_L1_CC[0]:1
+[PHY]   [lte-softmodem.c] eNB structure RC.eNB allocated
+[PHY]   Initializing eNB 0 CC_id 0 single_thread_flag:0
+[PHY]   Initializing eNB 0 CC_id 0
+[PHY]   Registering with MAC interface module
+[PHY]   Setting indication lists
+[PHY]   [lte-softmodem.c] eNB structure allocated
+wait_eNBs()
+Waiting for eNB L1 instances to all get configured ... sleeping 50ms (nb_L1_inst 1)
+RC.nb_L1_CC[0]:1
+eNB L1 are configured
+About to Init RU threads RC.nb_RU:1
+Initializing RU threads
+configuring RU from file
+Set RU mask to 1
+Creating RC.ru[0]:0x55f8b08f5e10
+Setting function for RU 0 to eNodeB_3GPP
+[PHY]   number of L1 instances 1, number of RU 1, number of CPU cores 2
+[PHY]   DJP - delete code above this /var/www/public/mi/MI-eNB/targets/RT/USER/lte-ru.c:2658
+[PHY]   Copying frame parms from eNB 0 to ru 0
+[PHY]   Initializing RRU descriptor 0 : (local RF,synch_to_ext_device,0)
+configuring ru_id 0 (start_rf 0x55f8aeb92be0)
+[PHY]   Starting ru_thread 0, is_slave 0, send_dmrs 0
+[PHY]   Initializing RU proc 0 (eNodeB_3GPP,synch_to_ext_device),
+[PHY]   init_RU_proc() DJP - added creation of pthread_prach
+[HW]   [SCHED][eNB] ru_thread started on CPU 0, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+channel 0, Setting tx_gain offset 0.000000, rx_gain offset 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[PHY]   Initializing RU signal buffers (if_south local RF) nb_tx 1
+[HW]   [SCHED][eNB] ru_thread_prach started on CPU 1, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   thread ru created id=88071
+[PHY]   Starting RU 0 (eNodeB_3GPP,synch_to_ext_device),
+waiting for sync (ru_thread,-1/0x55f8af4d2248,0x55f8afbe9be0,0x55f8afa9f7e0)
+[PHY]   ru_thread_prach() RU configured - RACH processing thread running
+[PHY]   [INIT] common.txdata[0] = 0x7fa7d3f4b040 (307200 bytes)
+[PHY]   nb_tx 1
+[PHY]   rxdata_7_5kHz[0] 0x55f8b0948140 for RU 0
+[PHY]   [INIT] common.txdata_BF= 0x55f8b09661c0 (8 bytes)
+[PHY]   txdataF_BF[0] 0x55f8b0966240 for RU 0
+[PHY]   rxdataF[0] 0x55f8b096d340 for RU 0
+[LOADER] library libtcp_bridge_oai.so successfully loaded
+tcp_bridge: running as eNB
+[HW]   [RAU] has loaded USRP B200 device.
+setup_RU_buffers: frame_parms = 0x55f8b08f5ec8
+[HW]   [SCHED][eNB] fep_thread started on CPU 1, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[HW]   [SCHED][eNB] feptx_thread started on CPU 0, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   thread fep created id=88073
+[PHY]   thread feptx created id=88074
+[PHY]   Signaling main thread that RU 0 (is_slave 0,send_dmrs 0) is ready in state RU_RUN
+wait RUs
+[ENB_APP]   Waiting for RUs to be configured ... RC.ru_mask:00
+[PHY]   RUs configured
+[ENB_APP]   RC.nb_RU:1
+ALL RUs ready - init eNBs
+[ENB_APP]   Not NFAPI mode - call init_eNB_afterRU()
+[PHY]   init_eNB_afterRU() RC.nb_inst:1
+[PHY]   RC.nb_CC[inst]:1
+[PHY]   RC.nb_CC[inst:0][CC_id:0]:0x7fa7d0dad010
+[PHY]   [eNB 0] phy_init_lte_eNB() About to wait for eNB to be configured[PHY]   [eNB 0] Initializing DL_FRAME_PARMS : N_RB_DL 25, PHICH Resource 1, PHICH Duration 0 nb_antennas_tx:0 nb_antennas_rx:0 nb_antenna_ports_eNB:1 PRACH[rootSequenceIndex:0 prach_Config_enabled:1 configIndex:0 highSpeed:0 zeroCorrelationZoneConfig:1 freqOffset:2]
+[PHY]   [eNB 0] Initializing DL_FRAME_PARMS : N_RB_DL 25, PHICH Resource 1, PHICH Duration 0
+pcfich_reg : 0,12,25,37
+[PHY]   [INIT] NB_ANTENNA_PORTS_ENB:6 fp->nb_antenna_ports_eNB:1
+[PHY]   [INIT] common_vars->txdataF[0] = 0x7fa7d3e6c040 (286720 bytes)
+[PHY]   [INIT] common_vars->txdataF[5] = 0x7fa7cce82040 (286720 bytes)
+[PHY]   Mapping RX ports from 1 RUs to eNB 0
+[PHY]   Overwriting eNB->prach_vars.rxsigF[0]:0x55f8b14a3c60
+[PHY]   Overwriting eNB->prach_vars_br.rxsigF.rxsigF[0]:(nil)
+[PHY]   Overwriting eNB->prach_vars_br.rxsigF.rxsigF[0]:(nil)
+[PHY]   Overwriting eNB->prach_vars_br.rxsigF.rxsigF[0]:(nil)
+[PHY]   Overwriting eNB->prach_vars_br.rxsigF.rxsigF[0]:(nil)
+[PHY]   eNB->num_RU:1
+[PHY]   Attaching RU 0 antenna 0 to eNB antenna 0
+[PHY]   init_eNB_afterRU() ************* DJP ***** eNB->frame_parms.nb_antennas_tx:0 - GOING TO HARD CODE TO 1[PHY]   inst 0, CC_id 0 : nb_antennas_rx 1
+[PHY]   Initialise transport
+[PHY]   init_eNB_proc(inst:0) RC.nb_CC[inst]:1 
+[PHY]   Initializing eNB processes instance:0 CC_id 0 
+[PHY]   Creating te_thread 0
+[PHY]   Creating te_thread 1
+[HW]   [SCHED][eNB] te_thread started on CPU 1, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   Creating te_thread 2
+[HW]   [SCHED][eNB] te_thread started on CPU 0, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   thread te created id=88079
+[PHY]   thread te created id=88080
+[HW]   [SCHED][eNB] te_thread started on CPU 0, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   eNB->single_thread_flag:0
+[HW]   [SCHED][eNB] td_thread started on CPU 1, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[PHY]   thread te created id=88081
+[PHY]   thread td created id=88082
+[HW]   [SCHED][eNB] eNB_thread_prach started on CPU 0, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[ENB_APP]   ALL RUs ready - ALL eNBs ready
+[HW]   [SCHED][eNB] eNB_thread_prach_br started on CPU 1, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 
+[ENB_APP]   Sending sync to all threads
+[ENB_APP]   TYPE <CTRL-C> TO TERMINATE
+got sync (ru_thread)
+tcp_bridge: wait for connection on port 4043
+tcp_bridge: connection established
+[PHY]   RU 0 rf device ready
+[MAC]   SCHED_MODE = 1
+[PHY]   prach_I0 = 0.0 dB
+[PHY]   [eNB 0/0][RAPROC] Frame 200, subframe 3 Initiating RA procedure with preamble 60, energy 24.0 dB, delay 0
+[PHY]   fill_ulsch UE_id 0 nb_rb = 0
+[RRC]   [FRAME 00201][eNB][MOD 00][RNTI aa9b] Decoding UL CCCH 59.b2.69.f6.ab.96 (0x55f8b3fb5923)
+[MI] 0xB0C0 message_type: LTE-RRC_UL_CCCH message_byte_in_hex: f0.0d.00.a4.a7.7f.00.00. rnti: aa9b frame: 201 subframe: 7
+[/MI]
+<UL-CCCH-Message>
+    <message>
+        <c1>
+            <rrcConnectionRequest>
+                <criticalExtensions>
+                    <rrcConnectionRequest-r8>
+                        <ue-Identity>
+                            <randomValue>
+                                1001101100100110100111110110101010111001
+                            </randomValue>
+                        </ue-Identity>
+                        <establishmentCause><mo-Signalling/></establishmentCause>
+                        <spare>
+                            0
+                        </spare>
+                    </rrcConnectionRequest-r8>
+                </criticalExtensions>
+            </rrcConnectionRequest>
+        </c1>
+    </message>
+</UL-CCCH-Message>
+[RRC]   [FRAME 00201][eNB][MOD 00][RNTI aa9b] Accept new connection from UE random UE identity (0xb96a9f269b000000) MME code 0 TMSI 0 cause 3
+<DL-CCCH-Message>
+    <message>
+        <c1>
+            <rrcConnectionSetup>
+                <rrc-TransactionIdentifier>1</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <rrcConnectionSetup-r8>
+                            <radioResourceConfigDedicated>
+                                <srb-ToAddModList>
+                                    <SRB-ToAddMod>
+                                        <srb-Identity>1</srb-Identity>
+                                        <rlc-Config>
+                                            <explicitValue>
+                                                <am>
+                                                    <ul-AM-RLC>
+                                                        <t-PollRetransmit><ms80/></t-PollRetransmit>
+                                                        <pollPDU><p4/></pollPDU>
+                                                        <pollByte><kBinfinity/></pollByte>
+                                                        <maxRetxThreshold><t4/></maxRetxThreshold>
+                                                    </ul-AM-RLC>
+                                                    <dl-AM-RLC>
+                                                        <t-Reordering><ms35/></t-Reordering>
+                                                        <t-StatusProhibit><ms0/></t-StatusProhibit>
+                                                    </dl-AM-RLC>
+                                                </am>
+                                            </explicitValue>
+                                        </rlc-Config>
+                                        <logicalChannelConfig>
+                                            <explicitValue>
+                                                <ul-SpecificParameters>
+                                                    <priority>1</priority>
+                                                    <prioritisedBitRate><infinity/></prioritisedBitRate>
+                                                    <bucketSizeDuration><ms50/></bucketSizeDuration>
+                                                    <logicalChannelGroup>0</logicalChannelGroup>
+                                                </ul-SpecificParameters>
+                                            </explicitValue>
+                                        </logicalChannelConfig>
+                                    </SRB-ToAddMod>
+                                </srb-ToAddModList>
+                                <mac-MainConfig>
+                                    <explicitValue>
+                                        <ul-SCH-Config>
+                                            <maxHARQ-Tx><n5/></maxHARQ-Tx>
+                                            <periodicBSR-Timer><sf64/></periodicBSR-Timer>
+                                            <retxBSR-Timer><sf320/></retxBSR-Timer>
+                                            <ttiBundling><false/></ttiBundling>
+                                        </ul-SCH-Config>
+                                        <timeAlignmentTimerDedicated><infinity/></timeAlignmentTimerDedicated>
+                                        <phr-Config>
+                                            <setup>
+                                                <periodicPHR-Timer><sf20/></periodicPHR-Timer>
+                                                <prohibitPHR-Timer><sf20/></prohibitPHR-Timer>
+                                                <dl-PathlossChange><dB1/></dl-PathlossChange>
+                                            </setup>
+                                        </phr-Config>
+                                    </explicitValue>
+                                </mac-MainConfig>
+                                <physicalConfigDedicated>
+                                    <pdsch-ConfigDedicated>
+                                        <p-a><dB0/></p-a>
+                                    </pdsch-ConfigDedicated>
+                                    <pucch-ConfigDedicated>
+                                        <ackNackRepetition>
+                                            <release></release>
+                                        </ackNackRepetition>
+                                        <tdd-AckNackFeedbackMode><bundling/></tdd-AckNackFeedbackMode>
+                                    </pucch-ConfigDedicated>
+                                    <pusch-ConfigDedicated>
+                                        <betaOffset-ACK-Index>0</betaOffset-ACK-Index>
+                                        <betaOffset-RI-Index>0</betaOffset-RI-Index>
+                                        <betaOffset-CQI-Index>8</betaOffset-CQI-Index>
+                                    </pusch-ConfigDedicated>
+                                    <uplinkPowerControlDedicated>
+                                        <p0-UE-PUSCH>0</p0-UE-PUSCH>
+                                        <deltaMCS-Enabled><en1/></deltaMCS-Enabled>
+                                        <accumulationEnabled><true/></accumulationEnabled>
+                                        <p0-UE-PUCCH>0</p0-UE-PUCCH>
+                                        <pSRS-Offset>0</pSRS-Offset>
+                                        <filterCoefficient><fc4/></filterCoefficient>
+                                    </uplinkPowerControlDedicated>
+                                    <tpc-PDCCH-ConfigPUCCH>
+                                        <setup>
+                                            <tpc-RNTI>
+                                                0001001000110100
+                                            </tpc-RNTI>
+                                            <tpc-Index>
+                                                <indexOfFormat3>1</indexOfFormat3>
+                                            </tpc-Index>
+                                        </setup>
+                                    </tpc-PDCCH-ConfigPUCCH>
+                                    <tpc-PDCCH-ConfigPUSCH>
+                                        <setup>
+                                            <tpc-RNTI>
+                                                0010001000110100
+                                            </tpc-RNTI>
+                                            <tpc-Index>
+                                                <indexOfFormat3>1</indexOfFormat3>
+                                            </tpc-Index>
+                                        </setup>
+                                    </tpc-PDCCH-ConfigPUSCH>
+                                    <cqi-ReportConfig>
+                                        <cqi-ReportModeAperiodic><rm30/></cqi-ReportModeAperiodic>
+                                        <nomPDSCH-RS-EPRE-Offset>0</nomPDSCH-RS-EPRE-Offset>
+                                        <cqi-ReportPeriodic>
+                                            <release></release>
+                                        </cqi-ReportPeriodic>
+                                    </cqi-ReportConfig>
+                                    <antennaInfo>
+                                        <explicitValue>
+                                            <transmissionMode><tm1/></transmissionMode>
+                                            <ue-TransmitAntennaSelection>
+                                                <release></release>
+                                            </ue-TransmitAntennaSelection>
+                                        </explicitValue>
+                                    </antennaInfo>
+                                    <schedulingRequestConfig>
+                                        <setup>
+                                            <sr-PUCCH-ResourceIndex>15</sr-PUCCH-ResourceIndex>
+                                            <sr-ConfigIndex>7</sr-ConfigIndex>
+                                            <dsr-TransMax><n4/></dsr-TransMax>
+                                        </setup>
+                                    </schedulingRequestConfig>
+                                </physicalConfigDedicated>
+                            </radioResourceConfigDedicated>
+                        </rrcConnectionSetup-r8>
+                    </c1>
+                </criticalExtensions>
+            </rrcConnectionSetup>
+        </c1>
+    </message>
+</DL-CCCH-Message>
+[MAC]   Added physicalConfigDedicated 0x7fa7a40043b0 for 0.0
+[RRC]   [FRAME 00201][eNB][MOD 00][RNTI aa9b]CALLING RLC CONFIG SRB1 (rbid 1)
+add new uid is 0 aa9b
+
+[PDCP]   [FRAME 00201][eNB][MOD 00][RNTI aa9b][SRB 01]  Action ADD  LCID 1 (SRB id 1) configured with SN size 5 bits and RLC AM
+[RLC]   [FRAME 00201][eNB][MOD 00][RNTI aa9b] [SRB 1] rrc_rlc_add_rlc  SRB
+[RLC]   [FRAME 00201][eNB][MOD 00][RNTI aa9b][SRB AM 01][CONFIGURE] max_retx_threshold 4 poll_pdu 4 poll_byte 65535 t_poll_retransmit 80 t_reordering 35 t_status_prohibit 0
+[MAC]   Programming PHICH ACK for frame 201, subframe 7, rnti aa9b harq_pid 2 (first_rb 1)
+[MAC]   generate_Msg4 ra->Msg4_frame SFN/SF: 202.4,  frameP SFN/SF: 202.4 FOR eNB_Mod: 0 
+[MAC]   [eNB 0][RAPROC] CC_id 0 Frame 202, subframeP 4: Generating Msg4 with RRC Piggyback (RNTI aa9b)
+[PHY]   fill_ulsch UE_id 0 nb_rb = 0
+[MAC]   Programming PHICH ACK for frame 203, subframe 8, rnti aa9b harq_pid 3 (first_rb 1)
+[PHY]   fill_ulsch UE_id 0 nb_rb = 0
+[MI] 0xB0C0 message_type: LTE-RRC_UL_DCCH message_byte_in_hex: 22.10.6e.0e.82.e2.10.53.00.86.42.86.cb.0f.f2.05.c1.c0.00.40.04.07.a0.22.4e.35.01.00.42.20.02.00.00.21.02.0c.00.00.00.01.06.0c.00.00.00.00.00.1a.00.00.14.00.a4.25.e4.02.4e.22.00. rnti: aa9b frame: 0 subframe: 0
+[/MI]
+[MI] 0xB0C1
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <rrcConnectionSetupComplete>
+                <rrc-TransactionIdentifier>1</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <rrcConnectionSetupComplete-r8>
+                            <selectedPLMN-Identity>1</selectedPLMN-Identity>
+                            <dedicatedInfoNAS>
+                                07 41 71 08 29 80 43 21 43 65 87 F9 02 E0 E0 00 
+                                20 02 03 D0 11 27 1A 80 80 21 10 01 00 00 10 81 
+                                06 00 00 00 00 83 06 00 00 00 00 00 0D 00 00 0A 
+                                00 52 12 F2 01 27 11
+                            </dedicatedInfoNAS>
+                            <nonCriticalExtension>
+                            </nonCriticalExtension>
+                        </rrcConnectionSetupComplete-r8>
+                    </c1>
+                </criticalExtensions>
+            </rrcConnectionSetupComplete>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+[/MI]
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] [RAPROC] Logical Channel UL-DCCH, processing LTE_RRCConnectionSetupComplete from UE (SRB1 Active)
+<DL-DCCH-Message>
+    <message>
+        <c1>
+            <securityModeCommand>
+                <rrc-TransactionIdentifier>2</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <securityModeCommand-r8>
+                            <securityConfigSMC>
+                                <securityAlgorithmConfig>
+                                    <cipheringAlgorithm><eea0/></cipheringAlgorithm>
+                                    <integrityProtAlgorithm><eia0-v920/></integrityProtAlgorithm>
+                                </securityAlgorithmConfig>
+                            </securityConfigSMC>
+                        </securityModeCommand-r8>
+                    </c1>
+                </criticalExtensions>
+            </securityModeCommand>
+        </c1>
+    </message>
+</DL-DCCH-Message>
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] Logical Channel DL-DCCH, Generate SecurityModeCommand (bytes 3)
+[RRC]   calling rrc_data_req :securityModeCommand
+[RRC]   sent RRC_DCCH_DATA_REQ to TASK_PDCP_ENB
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] UE State = RRC_CONNECTED 
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][SRB AM 01] RLC_AM_DATA_REQ size 8 Bytes,  NB SDU 1 current_sdu_index=0 next_sdu_index=1 conf 0 mui 0 vtA 0 vtS 0
+[MAC]   Programming PHICH ACK for frame 204, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 207, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MI] 0xB0C0 message_type: LTE-RRC_UL_DCCH message_byte_in_hex: 2c.00. rnti: aa9b frame: 0 subframe: 0
+[/MI]
+[MI] 0xB0C1
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <securityModeComplete>
+                <rrc-TransactionIdentifier>2</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <securityModeComplete-r8>
+                    </securityModeComplete-r8>
+                </criticalExtensions>
+            </securityModeComplete>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+[/MI]
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] received securityModeComplete on UL-DCCH 1 from UE
+<DL-DCCH-Message>
+    <message>
+        <c1>
+            <ueCapabilityEnquiry>
+                <rrc-TransactionIdentifier>0</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <ueCapabilityEnquiry-r8>
+                            <ue-CapabilityRequest><eutra/>
+                            </ue-CapabilityRequest>
+                        </ueCapabilityEnquiry-r8>
+                    </c1>
+                </criticalExtensions>
+            </ueCapabilityEnquiry>
+        </c1>
+    </message>
+</DL-DCCH-Message>
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] Logical Channel DL-DCCH, Generate UECapabilityEnquiry (bytes 3)
+[RRC]   sent RRC_DCCH_DATA_REQ to TASK_PDCP_ENB
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][SRB AM 01] RLC_AM_DATA_REQ size 8 Bytes,  NB SDU 2 current_sdu_index=1 next_sdu_index=2 conf 0 mui 1 vtA 2 vtS 2
+[MAC]   Programming PHICH ACK for frame 210, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MI] 0xB0C0 message_type: LTE-RRC_UL_DCCH message_byte_in_hex: 38.01.00.f0.18.00.03.08.98.64.a0.c1.b8.3b.07.a0.f8.00.00. rnti: aa9b frame: 0 subframe: 0
+[/MI]
+[MI] 0xB0C1
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <ueCapabilityInformation>
+                <rrc-TransactionIdentifier>0</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <ueCapabilityInformation-r8>
+                            <ue-CapabilityRAT-ContainerList>
+                                <UE-CapabilityRAT-Container>
+                                    <rat-Type><eutra/></rat-Type>
+                                    <ueCapabilityRAT-Container>01 80 00 30 89 86 4A 0C 1B 83 B0 7A 0F 80 00</ueCapabilityRAT-Container>
+                                </UE-CapabilityRAT-Container>
+                            </ue-CapabilityRAT-ContainerList>
+                        </ueCapabilityInformation-r8>
+                    </c1>
+                </criticalExtensions>
+            </ueCapabilityInformation>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+[/MI]
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] received ueCapabilityInformation on UL-DCCH 1 from UE
+[RRC]   got UE capabilities for UE aa9b 0 0
+[RRC]   [eNB 0] frame 0: requesting A2, A3, A4, and A5 event reporting
+<DL-DCCH-Message>
+    <message>
+        <c1>
+            <rrcConnectionReconfiguration>
+                <rrc-TransactionIdentifier>1</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <rrcConnectionReconfiguration-r8>
+                            <radioResourceConfigDedicated>
+                                <srb-ToAddModList>
+                                    <SRB-ToAddMod>
+                                        <srb-Identity>2</srb-Identity>
+                                        <rlc-Config>
+                                            <explicitValue>
+                                                <am>
+                                                    <ul-AM-RLC>
+                                                        <t-PollRetransmit><ms15/></t-PollRetransmit>
+                                                        <pollPDU><p8/></pollPDU>
+                                                        <pollByte><kB1000/></pollByte>
+                                                        <maxRetxThreshold><t32/></maxRetxThreshold>
+                                                    </ul-AM-RLC>
+                                                    <dl-AM-RLC>
+                                                        <t-Reordering><ms35/></t-Reordering>
+                                                        <t-StatusProhibit><ms10/></t-StatusProhibit>
+                                                    </dl-AM-RLC>
+                                                </am>
+                                            </explicitValue>
+                                        </rlc-Config>
+                                        <logicalChannelConfig>
+                                            <explicitValue>
+                                                <ul-SpecificParameters>
+                                                    <priority>3</priority>
+                                                    <prioritisedBitRate><infinity/></prioritisedBitRate>
+                                                    <bucketSizeDuration><ms50/></bucketSizeDuration>
+                                                    <logicalChannelGroup>0</logicalChannelGroup>
+                                                </ul-SpecificParameters>
+                                            </explicitValue>
+                                        </logicalChannelConfig>
+                                    </SRB-ToAddMod>
+                                </srb-ToAddModList>
+                                <drb-ToAddModList>
+                                    <DRB-ToAddMod>
+                                        <eps-BearerIdentity>5</eps-BearerIdentity>
+                                        <drb-Identity>1</drb-Identity>
+                                        <pdcp-Config>
+                                            <discardTimer><infinity/></discardTimer>
+                                            <rlc-AM>
+                                                <statusReportRequired><false/></statusReportRequired>
+                                            </rlc-AM>
+                                            <headerCompression>
+                                                <notUsed></notUsed>
+                                            </headerCompression>
+                                        </pdcp-Config>
+                                        <rlc-Config>
+                                            <am>
+                                                <ul-AM-RLC>
+                                                    <t-PollRetransmit><ms50/></t-PollRetransmit>
+                                                    <pollPDU><p16/></pollPDU>
+                                                    <pollByte><kBinfinity/></pollByte>
+                                                    <maxRetxThreshold><t8/></maxRetxThreshold>
+                                                </ul-AM-RLC>
+                                                <dl-AM-RLC>
+                                                    <t-Reordering><ms35/></t-Reordering>
+                                                    <t-StatusProhibit><ms25/></t-StatusProhibit>
+                                                </dl-AM-RLC>
+                                            </am>
+                                        </rlc-Config>
+                                        <logicalChannelIdentity>3</logicalChannelIdentity>
+                                        <logicalChannelConfig>
+                                            <ul-SpecificParameters>
+                                                <priority>12</priority>
+                                                <prioritisedBitRate><kBps8/></prioritisedBitRate>
+                                                <bucketSizeDuration><ms50/></bucketSizeDuration>
+                                                <logicalChannelGroup>1</logicalChannelGroup>
+                                            </ul-SpecificParameters>
+                                        </logicalChannelConfig>
+                                    </DRB-ToAddMod>
+                                </drb-ToAddModList>
+                                <mac-MainConfig>
+                                    <explicitValue>
+                                        <ul-SCH-Config>
+                                            <maxHARQ-Tx><n5/></maxHARQ-Tx>
+                                            <periodicBSR-Timer><sf64/></periodicBSR-Timer>
+                                            <retxBSR-Timer><sf320/></retxBSR-Timer>
+                                            <ttiBundling><false/></ttiBundling>
+                                        </ul-SCH-Config>
+                                        <timeAlignmentTimerDedicated><infinity/></timeAlignmentTimerDedicated>
+                                        <phr-Config>
+                                            <setup>
+                                                <periodicPHR-Timer><sf500/></periodicPHR-Timer>
+                                                <prohibitPHR-Timer><sf200/></prohibitPHR-Timer>
+                                                <dl-PathlossChange><dB3/></dl-PathlossChange>
+                                            </setup>
+                                        </phr-Config>
+                                        <ext1>
+                                            <sr-ProhibitTimer-r9>0</sr-ProhibitTimer-r9>
+                                        </ext1>
+                                    </explicitValue>
+                                </mac-MainConfig>
+                                <physicalConfigDedicated>
+                                    <pdsch-ConfigDedicated>
+                                        <p-a><dB0/></p-a>
+                                    </pdsch-ConfigDedicated>
+                                    <pucch-ConfigDedicated>
+                                        <ackNackRepetition>
+                                            <release></release>
+                                        </ackNackRepetition>
+                                        <tdd-AckNackFeedbackMode><bundling/></tdd-AckNackFeedbackMode>
+                                    </pucch-ConfigDedicated>
+                                    <pusch-ConfigDedicated>
+                                        <betaOffset-ACK-Index>0</betaOffset-ACK-Index>
+                                        <betaOffset-RI-Index>0</betaOffset-RI-Index>
+                                        <betaOffset-CQI-Index>8</betaOffset-CQI-Index>
+                                    </pusch-ConfigDedicated>
+                                    <uplinkPowerControlDedicated>
+                                        <p0-UE-PUSCH>0</p0-UE-PUSCH>
+                                        <deltaMCS-Enabled><en1/></deltaMCS-Enabled>
+                                        <accumulationEnabled><true/></accumulationEnabled>
+                                        <p0-UE-PUCCH>0</p0-UE-PUCCH>
+                                        <pSRS-Offset>0</pSRS-Offset>
+                                        <filterCoefficient><fc4/></filterCoefficient>
+                                    </uplinkPowerControlDedicated>
+                                    <tpc-PDCCH-ConfigPUCCH>
+                                        <setup>
+                                            <tpc-RNTI>
+                                                0001001000110100
+                                            </tpc-RNTI>
+                                            <tpc-Index>
+                                                <indexOfFormat3>1</indexOfFormat3>
+                                            </tpc-Index>
+                                        </setup>
+                                    </tpc-PDCCH-ConfigPUCCH>
+                                    <tpc-PDCCH-ConfigPUSCH>
+                                        <setup>
+                                            <tpc-RNTI>
+                                                0010001000110100
+                                            </tpc-RNTI>
+                                            <tpc-Index>
+                                                <indexOfFormat3>1</indexOfFormat3>
+                                            </tpc-Index>
+                                        </setup>
+                                    </tpc-PDCCH-ConfigPUSCH>
+                                    <cqi-ReportConfig>
+                                        <cqi-ReportModeAperiodic><rm30/></cqi-ReportModeAperiodic>
+                                        <nomPDSCH-RS-EPRE-Offset>0</nomPDSCH-RS-EPRE-Offset>
+                                        <cqi-ReportPeriodic>
+                                            <release></release>
+                                        </cqi-ReportPeriodic>
+                                    </cqi-ReportConfig>
+                                    <antennaInfo>
+                                        <explicitValue>
+                                            <transmissionMode><tm1/></transmissionMode>
+                                            <ue-TransmitAntennaSelection>
+                                                <release></release>
+                                            </ue-TransmitAntennaSelection>
+                                        </explicitValue>
+                                    </antennaInfo>
+                                    <schedulingRequestConfig>
+                                        <setup>
+                                            <sr-PUCCH-ResourceIndex>15</sr-PUCCH-ResourceIndex>
+                                            <sr-ConfigIndex>7</sr-ConfigIndex>
+                                            <dsr-TransMax><n4/></dsr-TransMax>
+                                        </setup>
+                                    </schedulingRequestConfig>
+                                </physicalConfigDedicated>
+                            </radioResourceConfigDedicated>
+                        </rrcConnectionReconfiguration-r8>
+                    </c1>
+                </criticalExtensions>
+            </rrcConnectionReconfiguration>
+        </c1>
+    </message>
+</DL-DCCH-Message>
+[RRC]   RRCConnectionReconfiguration Encoded 342 bits (43 bytes)
+[RRC]   [eNB 0] Frame 0, Logical Channel DL-DCCH, Generate LTE_RRCConnectionReconfiguration (bytes 43, UE id aa9b)
+[RRC]   sent RRC_DCCH_DATA_REQ to TASK_PDCP_ENB
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][SRB AM 01] RLC_AM_DATA_REQ size 48 Bytes,  NB SDU 3 current_sdu_index=2 next_sdu_index=3 conf 0 mui 2 vtA 3 vtS 3
+[MAC]   Programming PHICH ACK for frame 213, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MI] 0xB0C0 message_type: LTE-RRC_UL_DCCH message_byte_in_hex: 12.00. rnti: aa9b frame: 0 subframe: 0
+[/MI]
+[MI] 0xB0C1
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <rrcConnectionReconfigurationComplete>
+                <rrc-TransactionIdentifier>1</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <rrcConnectionReconfigurationComplete-r8>
+                    </rrcConnectionReconfigurationComplete-r8>
+                </criticalExtensions>
+            </rrcConnectionReconfigurationComplete>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+[/MI]
+[RRC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] UE State = RRC_RECONFIGURED (dedicated DRB, xid 1)
+[PDCP]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][SRB 02]  Action ADD  LCID 2 (SRB id 2) configured with SN size 5 bits and RLC AM
+[PDCP]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][DRB 01]  Action ADD  LCID 3 (DRB id 1) configured with SN size 12 bits and RLC AM
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] [SRB 2] rrc_rlc_add_rlc  SRB
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][SRB AM 02][CONFIGURE] max_retx_threshold 32 poll_pdu 8 poll_byte 16960 t_poll_retransmit 15 t_reordering 35 t_status_prohibit 10
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b] [DRB 1] rrc_rlc_add_rlc  DRB
+[RLC]   [FRAME 00000][eNB][MOD 00][RNTI aa9b][DRB AM 01][CONFIGURE] max_retx_threshold 8 poll_pdu 16 poll_byte 65535 t_poll_retransmit 50 t_reordering 35 t_status_prohibit 25
+[RRC]   [eNB 0] Frame  0 CC 0 : SRB2 is now active
+[RRC]   [eNB 0] Frame  0 : Logical Channel UL-DCCH, Received LTE_RRCConnectionReconfigurationComplete from UE rnti aa9b, reconfiguring DRB 1/LCID 3
+[RRC]   [eNB 0] Frame  0 : Logical Channel UL-DCCH, Received LTE_RRCConnectionReconfigurationComplete from UE 0, reconfiguring DRB 1/LCID 3
+[MAC]   Added physicalConfigDedicated 0x7fa7a40043b0 for 0.0
+[MAC]   Programming PHICH ACK for frame 216, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 219, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 222, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 225, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 228, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 231, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 234, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 237, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 240, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 243, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 246, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 249, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 252, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 255, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   UE  rnti aa9b : in synch, PHR 40 dB DL CQI 15 PUSCH SNR 48 PUCCH SNR 59
+[MAC]   Programming PHICH ACK for frame 258, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 261, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 264, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 267, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 270, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 273, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 276, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 279, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 282, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 285, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 288, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+[MAC]   Programming PHICH ACK for frame 291, subframe 2, rnti aa9b harq_pid 0 (first_rb 1)
+

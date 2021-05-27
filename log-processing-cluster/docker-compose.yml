@@ -1,0 +1,89 @@
+version: "3.3"
+services:
+  node-master:
+    depends_on:
+      - node-slave1
+#      - node-slave2
+    image: cluster-base:latest
+    container_name: node-master
+    hostname: node-master
+    tty: true
+    ports:
+      - "8088:8088"
+      - "50070:50070"
+      - "50030:50030"
+      - "8080:8080"
+      - "8042:8042"
+      - "8888:8888"
+    networks:
+      cluster-network:
+      #default:
+        aliases: 
+          - node-master
+    command: /root/logReceiver.sh
+    deploy:
+      placement:
+        constraints:
+          - node.labels.role==master
+  node-slave1:
+    image: cluster-base:latest
+    container_name: node-slave1
+    hostname: node-slave1
+    tty: true
+    ports:
+      - "7043:8042"
+    networks:
+      cluster-network:
+      #default:
+        aliases: 
+          - node-slave1
+    deploy:
+      placement:
+        constraints:
+          - node.labels.role==master
+#  node-slave2:
+#    image: cluster-base:latest
+#    container_name: node-slave2
+#    hostname: node-slave2
+#    tty: true
+#    ports:
+#      - "9043:8042"
+#    networks:
+#      cluster-network:
+#      #default:
+#        aliases: 
+#          - node-slave2
+#    deploy:
+#      placement:
+#        constraints:
+#          - node.labels.role==worker
+  basestation:
+    image: basestation:latest
+    container_name: basestation
+    hostname: basestation
+    tty: true
+    networks:
+      cluster-network:
+      #default:
+        aliases:
+          - basestation
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+      placement:
+        constraints:
+          - node.labels.role==master
+    privileged: true
+
+
+networks:
+  cluster-network:
+    external: true
+
+#networks:
+#  cluster-network:
+#    driver: overlay
+#    attachable: true
+#    ipam:
+#      driver: default

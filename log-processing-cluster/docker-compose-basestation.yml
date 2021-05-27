@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  basestation:
+    image: basestation:latest
+    container_name: basestation
+    hostname: basestation
+    tty: true
+    networks:
+      cluster-network:
+      #default:
+        aliases:
+          - basestation
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+      placement:
+        constraints:
+          - node.labels.role==master
+    privileged: true
+
+
+networks:
+  cluster-network:
+    external: true

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+        <property>
+                <name>yarn.acl.enable</name>
+                <value>0</value>
+        </property>
+
+        <property>
+                <name>yarn.resourcemanager.hostname</name>
+                <value>node-master</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.aux-services</name>
+                <value>mapreduce_shuffle</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.resource.cpu-vcores</name>
+                <value>1</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.resource.memory-mb</name>
+                <value>1536</value>
+        </property>
+        <property>
+                <name>yarn.scheduler.minimum-allocation-mb</name>
+                <value>256</value>
+        </property>
+        <property>
+                <name>yarn.scheduler.maximum-allocation-mb</name>
+                <value>1536</value>
+        </property>
+        <property>
+                <name>yarn.nodemanager.vmem-check-enabled</name>
+                <value>false</value>
+        </property>
+	<property>
+	  <description>The address of the scheduler interface.</description>
+	  <name>yarn.resourcemanager.scheduler.address</name>
+	  <value>node-master:8030</value>
+	</property>
+	<property>
+	  <name>yarn.resourcemanager.address</name>
+	  <value>node-master:8032</value>
+	</property>
+	<property>
+	  <name>yarn.resourcemanager.resource-tracker.address</name>
+	  <value>node-master:8031</value>
+	</property>
+
+	<!-- -->
+	<property>
+	  <name>yarn.nodemanager.container-executor.class</name>
+	  <value>org.apache.hadoop.yarn.server.nodemanager.LinuxContainerExecutor</value>
+	  <description>
+	    This is the container executor setting that ensures that all applications
+	    are started with the LinuxContainerExecutor.
+	  </description>
+	</property>
+
+	<property>
+	  <name>yarn.nodemanager.linux-container-executor.group</name>
+	  <value>hadoop</value>
+	  <description>
+	    The POSIX group of the NodeManager. It should match the setting in
+	    "container-executor.cfg". This configuration is required for validating
+	    the secure access of the container-executor binary.
+	  </description>
+	</property>
+
+	<property>
+	  <name>yarn.nodemanager.linux-container-executor.nonsecure-mode.limit-users</name>
+	  <value>false</value>
+	  <description>
+	    Whether all applications should be run as the NodeManager process' owner.
+	    When false, applications are launched instead as the application owner.
+	  </description>
+	</property>
+
+	<property>
+	  <name>yarn.nodemanager.runtime.linux.allowed-runtimes</name>
+	  <value>default,docker</value>
+	  <description>
+	    Comma separated list of runtimes that are allowed when using
+	    LinuxContainerExecutor. The allowed values are default, docker, and
+	    javasandbox.
+	  </description>
+	</property>
+
+	<property>
+	  <name>yarn.nodemanager.runtime.linux.docker.default-container-network</name>
+	  <value>host</value>
+	  <description>
+	    The network used when launching Docker containers when no
+	    network is specified in the request. This network must be one of the
+	    (configurable) set of allowed container networks.
+	  </description>
+	</property>
+</configuration>
