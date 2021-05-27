@@ -1,24 +1,27 @@
-from pyspark import SparkContext
+from pyspark import SparkContext, SparkConf
 from pyspark.streaming import StreamingContext
 import binascii
 
-sc = SparkContext("spark://vagrant.vm:7077", "NetworkWordCount")
+conf = SparkConf()
+conf.setAppName('basestation-analyze')
+sc = SparkContext(conf=conf)
 sc.setLogLevel("ERROR")
-ssc = StreamingContext(sc, 1)
+ssc = StreamingContext(sc, 10)
 ssc.checkpoint("checkpoint")
+
 initialStateRDD = sc.parallelize([])
 
-stream_data = ssc.textFileStream("file:////home/vagrant/219/data")
+stream_data = ssc.textFileStream("hdfs:///data/")
 
 def decode_line(line):
     try:
-        l = self.packet.split(" ")
+        l = line.split(" ")
         if l[1] == "DCI":
-            return l[2]
+            return [l[2]]
         else:
-            return None
+            return [""]
     except:
-        return None
+        return [""]
 
 def message_count(m):
     return m, 1
